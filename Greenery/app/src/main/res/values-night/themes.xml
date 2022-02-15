@@ -14,5 +14,13 @@
         <!-- Customize your theme here. -->
         <!--툴바의 그림자 없애기-->
         <item name="android:windowContentOverlay">@null</item>
+        <!--상단바의 아이콘, 시계, 알림 등 색상-->
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <!--검색창 스타일-->
+    <style name="customSearchView" parent="Widget.AppCompat.SearchView" >
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/Gray</item>
+        <item name="fontFamily">@font/roboto_regular</item>
     </style>
 </resources>

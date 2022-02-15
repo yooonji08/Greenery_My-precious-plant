@@ -45,4 +45,11 @@ dependencies {
 
     // 하단 탭을 위함
     implementation 'com.android.support:design:29.0.0'
+
+    // 카드뷰 위젯을 위함
+    implementation 'androidx.cardview:cardview:1.0.0'
+
+    // recyclerview를 위함
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc03'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 }

@@ -1,18 +1,28 @@
 package com.example.greenery
 
+import android.graphics.drawable.GradientDrawable
+import android.icu.lang.UCharacter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
 
+    // 툴바의 메뉴
     private lateinit var main_plusPlantButton: ImageView // 식물 추가 버튼
     private lateinit var main_plusDiaryButton: ImageView // 식물 일기 추가 버튼
+
+    // 리사이클러뷰(식물 카드뷰)
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var viewAdapter: RecyclerView.Adapter<*>
+    private lateinit var viewManager: RecyclerView.LayoutManager
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,6 +45,18 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         // 현재 화면을 시작 화면으로 설정
         NavigationBarView.OnItemSelectedListener { item ->
             onNavigationItemSelected(item)
+        }
+
+        // 뷰매니저 설정
+        viewManager = GridLayoutManager(this, 2)
+        // 어댑터 설정
+        viewAdapter = cardViewAdapter()
+        // 리사이클러뷰와 어댑터 연결
+        recyclerView = findViewById(R.id.main_RecyclerView)
+        recyclerView.apply {
+            setHasFixedSize(true)
+            layoutManager = viewManager
+            adapter = viewAdapter
         }
     }
 
