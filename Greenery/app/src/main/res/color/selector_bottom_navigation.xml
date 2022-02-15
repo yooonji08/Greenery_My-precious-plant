@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--하단 네비게이션을 선택 or 미선택했을 경우, 각 탭 별 색상-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true" android:color="@color/Lime" />
+    <item android:state_checked="false" android:color="@color/Gray" />
+</selector>

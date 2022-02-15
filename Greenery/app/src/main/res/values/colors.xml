@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--기존 앱 색상-->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,4 +8,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--Greenery 앱 색상-->
+    <color name="Green">#759703</color>
+    <color name="Lime">#BED95B</color>
+    <color name="BrightGreen">#ECF2D5</color>
+    <color name="Latte">#A68877</color>
+    <color name="Beige">#D9C6BA</color>
+    <color name="Black">#282424</color>
+    <color name="DarkGray">#616161</color>
+    <color name="Gray">#C4C4C4</color>
+    <color name="BrightGray">#F2F2F2</color>
+    <color name="White">#FFFFFF</color>
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--식물 추가 메뉴
+    <item
+        android:id="@+id/menu_plusPlant"
+        android:title="식물 추가"
+        app:showAsAction="ifRoom"
+        app:actionLayout="@layout/layout_main_toolbar"/> -->
+
+    <!--식물 일기 추가 메뉴
+    <item
+        android:id="@+id/menu_plusDiary"
+        android:title="식물 일기 추가"
+        app:showAsAction="ifRoom" /> -->
+</menu>

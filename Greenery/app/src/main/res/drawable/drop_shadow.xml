@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <!--하단 네비게이션바의 그림자 효과-->
+    <gradient
+        android:startColor="@color/BrightGray"
+        android:endColor="@null"
+        android:angle="90" />
+</shape>
