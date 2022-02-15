@@ -12,6 +12,9 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationBarView
 
+// 뒤로가기 버튼과 연관된 상수
+private const val TIME_INTERVAL = 2000 // 1,2번째 버튼 클릭 사이의 시간차
+
 class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListener {
 
     // 툴바의 메뉴
@@ -23,6 +26,8 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
     private lateinit var viewAdapter: RecyclerView.Adapter<*>
     private lateinit var viewManager: RecyclerView.LayoutManager
 
+    // 뒤로가기 버튼과 연관된 변수
+    private var backPressedTime: Long = 0 // '뒤로가기'버튼을 클릭했을 때의 시간
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,7 +55,7 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         // 뷰매니저 설정
         viewManager = GridLayoutManager(this, 2)
         // 어댑터 설정
-        viewAdapter = cardViewAdapter()
+        viewAdapter = CardViewAdapter()
         // 리사이클러뷰와 어댑터 연결
         recyclerView = findViewById(R.id.main_RecyclerView)
         recyclerView.apply {
@@ -97,6 +102,20 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         }
 
         return false
+    }
+
+    // 뒤로가기 버튼 클릭 이벤트
+    override fun onBackPressed() {
+
+        // 1번째 버튼 클릭 시간과 현재 시간 비교 -> 1,2번째 버튼 클릭 사이의 시간차가 2초보다 크면 앱 종료X
+        if (System.currentTimeMillis() > backPressedTime + TIME_INTERVAL) {
+            backPressedTime = System.currentTimeMillis() // 현재 시간을 저장
+
+            Toast.makeText(this, "'뒤로'버튼을 한번 더 누르시면 종료됩니다.", Toast.LENGTH_SHORT).show()
+        }
+        else { // 1,2번째 버튼 클릭 사이의 시간차가 2초보다 작으면 앱 종료
+            finish() // 앱 종료
+        }
     }
 
     // 아래 코드는 툴바에 있는 메뉴를 menu파일로 따로 만들었을 경우 사용
