@@ -74,7 +74,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/addPlant_photoImgBtn" />
 
                 <Button
-                    android:id="@+id/addPlant_selectKindBtn"
+                    android:id="@+id/addPlant_selectSpeciesBtn"
                     android:layout_width="328dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="8dp"
@@ -104,7 +104,7 @@
                     android:layout_marginTop="40dp"
                     android:src="@drawable/ic_leaf"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_selectKindBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_selectSpeciesBtn"
                     app:tint="@color/Lime" />
 
                 <TextView
@@ -118,10 +118,10 @@
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/leaf_ImgView2"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_selectKindBtn" />
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_selectSpeciesBtn" />
 
                 <EditText
-                    android:id="@+id/addPlant_niknameEditText"
+                    android:id="@+id/addPlant_nicknameEditText"
                     android:layout_width="328dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="8dp"
@@ -143,7 +143,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_niknameEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_nicknameEditText"
                     app:srcCompat="@drawable/ic_date"
                     app:tint="@color/Lime" />
 
@@ -158,7 +158,7 @@
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/date_ImgView"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_niknameEditText" />
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_nicknameEditText" />
 
                 <Button
                     android:id="@+id/addPlant_firstDateBtn"

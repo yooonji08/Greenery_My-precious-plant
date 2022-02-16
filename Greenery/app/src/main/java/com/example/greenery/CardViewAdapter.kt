@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 class CardViewAdapter(): RecyclerView.Adapter<CardViewAdapter.CardViewHolder>() {
     class CardViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         var itemImage: ImageView = itemView.findViewById(R.id.myPlant_ImageView)
-        var itemNickname: TextView = itemView.findViewById(R.id.myPlant_niknameTextView)
-        var itemKind: TextView = itemView.findViewById(R.id.myPlant_kindTextView)
+        var itemNickname: TextView = itemView.findViewById(R.id.myPlant_nicknameTextView)
+        var itemSpecies: TextView = itemView.findViewById(R.id.myPlant_speciesTextView)
         var itemDate: TextView = itemView.findViewById(R.id.myPlant_dateTextView)
     }
 
@@ -28,7 +28,7 @@ class CardViewAdapter(): RecyclerView.Adapter<CardViewAdapter.CardViewHolder>() 
         holder.itemImage.setImageResource(R.drawable.img_money_tree)
         holder.itemImage.clipToOutline = true // 둥근 모서리 적용(background속성 적용)
         holder.itemNickname.text = "닉네임"
-        holder.itemKind.text = "식물 종류"
+        holder.itemSpecies.text = "식물 종류"
         holder.itemDate.text = "식물을 데려온 날짜"
     }
 

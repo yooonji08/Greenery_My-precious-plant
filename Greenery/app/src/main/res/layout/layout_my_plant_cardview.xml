@@ -27,7 +27,7 @@
             tools:srcCompat="@drawable/img_money_tree" />
 
         <TextView
-            android:id="@+id/myPlant_niknameTextView"
+            android:id="@+id/myPlant_nicknameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -40,7 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/myPlant_ImageView" />
 
         <TextView
-            android:id="@+id/myPlant_kindTextView"
+            android:id="@+id/myPlant_speciesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
@@ -49,7 +49,7 @@
             android:textColor="@color/DarkGray"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/myPlant_niknameTextView" />
+            app:layout_constraintTop_toBottomOf="@+id/myPlant_nicknameTextView" />
 
         <TextView
             android:id="@+id/myPlant_dateTextView"
