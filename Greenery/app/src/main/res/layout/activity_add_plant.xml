@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    tools:context=".AddPlantActivity">
+
+    <!--커스텀 툴바 적용-->
+    <include
+        android:id="@+id/include_sub_toolbar"
+        layout="@layout/layout_sub_toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--화면이 들어갈 자리-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include_sub_toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/addPlant_photoImgBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/shape_rectangle_round"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/Gray" />
+
+                <ImageView
+                    android:id="@+id/leaf_ImgView"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/ic_leaf"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_photoImgBtn"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="식물 종류"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/leaf_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_photoImgBtn" />
+
+                <Button
+                    android:id="@+id/addPlant_selectKindBtn"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:drawableRight="@drawable/layerlist_ic_down"
+                    android:drawableTint="@color/DarkGray"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="선택"
+                    android:outlineProvider="none"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/leaf_ImgView">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/leaf_ImgView2"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:src="@drawable/ic_leaf"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_selectKindBtn"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="식물 애칭"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/leaf_ImgView2"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_selectKindBtn" />
+
+                <EditText
+                    android:id="@+id/addPlant_niknameEditText"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:ems="10"
+                    android:hint="식물 애칭을 입력하세요"
+                    android:inputType="text"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:theme="@style/customEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/leaf_ImgView2" />
+
+                <ImageView
+                    android:id="@+id/date_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_niknameEditText"
+                    app:srcCompat="@drawable/ic_date"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="처음 식물을 데려온 날짜"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/date_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_niknameEditText" />
+
+                <Button
+                    android:id="@+id/addPlant_firstDateBtn"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="선택"
+                    android:outlineProvider="none"
+                    android:paddingLeft="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/date_ImgView">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/water_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_firstDateBtn"
+                    app:srcCompat="@drawable/ic_water_drop"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="마지막으로 물 준 날짜"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/water_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_firstDateBtn" />
+
+                <Button
+                    android:id="@+id/addPlant_waterDateBtn"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="선택"
+                    android:outlineProvider="none"
+                    android:paddingLeft="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/water_ImgView">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/syringe_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_waterDateBtn"
+                    app:srcCompat="@drawable/ic_syringe"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="마지막으로 영양제를 준 날짜"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/syringe_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_waterDateBtn" />
+
+                <Button
+                    android:id="@+id/addPlant_syringeDateBtn"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="선택"
+                    android:outlineProvider="none"
+                    android:paddingLeft="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/syringe_ImgView">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/pot_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_syringeDateBtn"
+                    app:srcCompat="@drawable/ic_pot"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="마지막으로 분갈이를 한 날짜"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/pot_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_syringeDateBtn" />
+
+                <Button
+                    android:id="@+id/addPlant_potDateBtn"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="선택"
+                    android:outlineProvider="none"
+                    android:paddingLeft="16dp"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pot_ImgView">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/alarm_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_potDateBtn"
+                    app:srcCompat="@drawable/ic_alarm"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="주기 (일)"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/alarm_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_potDateBtn" />
+
+                <Button
+                    android:id="@+id/addPlant_waterPeriodBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="물: 12"
+                    android:outlineProvider="none"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_syringePeriodBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alarm_ImgView">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/addPlant_syringePeriodBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="영양제: 125"
+                    android:outlineProvider="none"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_potPeriodBtn"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_waterPeriodBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/alarm_ImgView">
+
+                </Button>
+
+                <Button
+                    android:id="@+id/addPlant_potPeriodBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="분갈이: 125"
+                    android:outlineProvider="none"
+                    android:textAlignment="center"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_syringePeriodBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/alarm_ImgView">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/water_ImgView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_waterPeriodBtn"
+                    app:srcCompat="@drawable/ic_water_drop"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="물 주는 양"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/water_ImgView2"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_waterPeriodBtn" />
+
+                <EditText
+                    android:id="@+id/addPlant_waterSumEditText"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:ems="10"
+                    android:hint="하루에 4번씩 30ml를 주세요"
+                    android:inputType="text"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:theme="@style/customEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/water_ImgView2" />
+
+                <ImageView
+                    android:id="@+id/sunlight_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_waterSumEditText"
+                    app:srcCompat="@drawable/ic_sunlight"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="일조량"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/sunlight_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_waterSumEditText" />
+
+                <EditText
+                    android:id="@+id/addPlant_sunlightSumEditText"
+                    android:layout_width="328dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:ems="10"
+                    android:hint="햇빛을 매일 쬐어 주세요"
+                    android:inputType="text"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:theme="@style/customEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/sunlight_ImgView" />
+
+                <ImageView
+                    android:id="@+id/temparature_ImgView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_sunlightSumEditText"
+                    app:srcCompat="@drawable/ic_temparature"
+                    app:tint="@color/Lime" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="38dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="생육 온도(℃)"
+                    android:textColor="@color/Lime"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/temparature_ImgView"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_sunlightSumEditText" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="최저"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_temparatureSumEditText1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/temparature_ImgView" />
+
+                <EditText
+                    android:id="@+id/addPlant_temparatureSumEditText1"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:ems="10"
+                    android:hint="20"
+                    android:inputType="number"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:theme="@style/customEditText"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_TextView12"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_TextView11"
+                    app:layout_constraintTop_toBottomOf="@+id/temparature_ImgView" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="~"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_TextView13"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_temparatureSumEditText1"
+                    app:layout_constraintTop_toBottomOf="@+id/temparature_ImgView" />
+
+                <TextView
+                    android:id="@+id/addPlant_TextView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="최고"
+                    android:textColor="@color/DarkGray"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_temparatureSumEditText2"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_TextView12"
+                    app:layout_constraintTop_toBottomOf="@+id/temparature_ImgView" />
+
+                <EditText
+                    android:id="@+id/addPlant_temparatureSumEditText2"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_rectangle_write_box"
+                    android:ems="10"
+                    android:hint="20"
+                    android:inputType="number"
+                    android:textColor="@color/Black"
+                    android:textColorHint="@color/DarkGray"
+                    android:theme="@style/customEditText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_TextView13"
+                    app:layout_constraintTop_toBottomOf="@+id/temparature_ImgView" />
+
+                <Space
+                    android:id="@+id/bottomSpace"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="6dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_temparatureSumEditText1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

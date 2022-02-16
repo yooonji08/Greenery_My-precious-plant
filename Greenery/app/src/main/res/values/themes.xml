@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Greenery" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="Theme.Greenery" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/White</item>
         <item name="colorPrimaryVariant">@color/White</item>
@@ -22,5 +22,13 @@
         <item name="android:textSize">10sp</item>
         <item name="android:textColor">@color/Gray</item>
         <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+    <!--EditText 스타일-->
+    <style name="customEditText" parent="Widget.AppCompat.EditText" >
+        <item name="colorControlActivated">@color/Green</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+        <item name="android:textColorHint">@color/DarkGray</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingLeft">16dp</item>
     </style>
 </resources>

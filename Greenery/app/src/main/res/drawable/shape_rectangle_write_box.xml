@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--식물 등록하기, 일기쓰기 화면에서 쓰이는 박스-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/BrightGray" />
+    <corners android:radius="8dp" />
+    <size android:width="328dp" android:height="32dp" />
+</shape>

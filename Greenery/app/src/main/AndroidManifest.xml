@@ -9,6 +9,7 @@
         android:roundIcon="@mipmap/ic_greenery_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Greenery">
+        <activity android:name=".AddPlantActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">

@@ -1,5 +1,6 @@
 package com.example.greenery
 
+import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.icu.lang.UCharacter
 import androidx.appcompat.app.AppCompatActivity
@@ -42,6 +43,8 @@ class MainActivity : AppCompatActivity(), NavigationBarView.OnItemSelectedListen
         // 툴바 내 메뉴 클릭 이벤트
         main_plusPlantButton.setOnClickListener { // 식물 추가 버튼 클릭
             Toast.makeText(this, "식물 추가!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, AddPlantActivity::class.java)
+            startActivity(intent) // 화면 이동
         }
         main_plusDiaryButton.setOnClickListener { // 식물 일기 추가 버튼 클릭
             Toast.makeText(this, "식물 일기 추가!", Toast.LENGTH_SHORT).show()
