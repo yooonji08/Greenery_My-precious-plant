@@ -167,7 +167,7 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/shape_rectangle_write_box"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="선택"
+                    android:hint="날짜 선택"
                     android:outlineProvider="none"
                     android:paddingLeft="16dp"
                     android:textAlignment="textStart"
@@ -198,7 +198,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="38dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="마지막으로 물 준 날짜"
+                    android:text="마지막으로 물을 준 날짜"
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/water_ImgView"
@@ -211,7 +211,7 @@
                     android:layout_marginTop="8dp"
                     android:background="@drawable/shape_rectangle_write_box"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="선택"
+                    android:hint="날짜 선택"
                     android:outlineProvider="none"
                     android:paddingLeft="16dp"
                     android:textAlignment="textStart"
@@ -242,20 +242,20 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="38dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="마지막으로 영양제를 준 날짜"
+                    android:text="마지막으로 영양제를 준 날짜 (선택)"
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/syringe_ImgView"
                     app:layout_constraintTop_toBottomOf="@+id/addPlant_waterDateBtn" />
 
                 <Button
-                    android:id="@+id/addPlant_syringeDateBtn"
+                    android:id="@+id/addPlant_nutritionDateBtn"
                     android:layout_width="328dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/shape_rectangle_write_box"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="선택"
+                    android:hint="날짜 선택"
                     android:outlineProvider="none"
                     android:paddingLeft="16dp"
                     android:textAlignment="textStart"
@@ -275,7 +275,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_syringeDateBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_nutritionDateBtn"
                     app:srcCompat="@drawable/ic_pot"
                     app:tint="@color/Lime" />
 
@@ -286,20 +286,20 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="38dp"
                     android:fontFamily="@font/roboto_regular"
-                    android:text="마지막으로 분갈이를 한 날짜"
+                    android:text="마지막으로 분갈이를 한 날짜 (선택)"
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/pot_ImgView"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_syringeDateBtn" />
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_nutritionDateBtn" />
 
                 <Button
-                    android:id="@+id/addPlant_potDateBtn"
+                    android:id="@+id/addPlant_separationDateBtn"
                     android:layout_width="328dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="8dp"
                     android:background="@drawable/shape_rectangle_write_box"
                     android:fontFamily="@font/roboto_regular"
-                    android:hint="선택"
+                    android:hint="날짜 선택"
                     android:outlineProvider="none"
                     android:paddingLeft="16dp"
                     android:textAlignment="textStart"
@@ -319,7 +319,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_potDateBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_separationDateBtn"
                     app:srcCompat="@drawable/ic_alarm"
                     app:tint="@color/Lime" />
 
@@ -334,7 +334,7 @@
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/alarm_ImgView"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_potDateBtn" />
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_separationDateBtn" />
 
                 <Button
                     android:id="@+id/addPlant_waterPeriodBtn"
@@ -351,14 +351,14 @@
                     android:textColor="@color/Black"
                     android:textColorHint="@color/DarkGray"
                     android:textSize="14sp"
-                    app:layout_constraintEnd_toStartOf="@+id/addPlant_syringePeriodBtn"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_nutritionPeriodBtn"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/alarm_ImgView">
 
                 </Button>
 
                 <Button
-                    android:id="@+id/addPlant_syringePeriodBtn"
+                    android:id="@+id/addPlant_nutritionPeriodBtn"
                     android:layout_width="0dp"
                     android:layout_height="32dp"
                     android:layout_marginStart="8dp"
@@ -372,14 +372,14 @@
                     android:textColor="@color/Black"
                     android:textColorHint="@color/DarkGray"
                     android:textSize="14sp"
-                    app:layout_constraintEnd_toStartOf="@+id/addPlant_potPeriodBtn"
+                    app:layout_constraintEnd_toStartOf="@+id/addPlant_separationPeriodBtn"
                     app:layout_constraintStart_toEndOf="@+id/addPlant_waterPeriodBtn"
                     app:layout_constraintTop_toBottomOf="@+id/alarm_ImgView">
 
                 </Button>
 
                 <Button
-                    android:id="@+id/addPlant_potPeriodBtn"
+                    android:id="@+id/addPlant_separationPeriodBtn"
                     android:layout_width="0dp"
                     android:layout_height="32dp"
                     android:layout_marginStart="8dp"
@@ -394,7 +394,7 @@
                     android:textColorHint="@color/DarkGray"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/addPlant_syringePeriodBtn"
+                    app:layout_constraintStart_toEndOf="@+id/addPlant_nutritionPeriodBtn"
                     app:layout_constraintTop_toBottomOf="@+id/alarm_ImgView">
 
                 </Button>
@@ -464,7 +464,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/addPlant_waterSumEditText" />
 
                 <EditText
-                    android:id="@+id/addPlant_sunlightSumEditText"
+                    android:id="@+id/addPlant_sunshineSumEditText"
                     android:layout_width="328dp"
                     android:layout_height="32dp"
                     android:layout_marginTop="8dp"
@@ -486,7 +486,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="40dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_sunlightSumEditText"
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_sunshineSumEditText"
                     app:srcCompat="@drawable/ic_temparature"
                     app:tint="@color/Lime" />
 
@@ -501,7 +501,7 @@
                     android:textColor="@color/Lime"
                     android:textSize="12sp"
                     app:layout_constraintStart_toEndOf="@+id/temparature_ImgView"
-                    app:layout_constraintTop_toBottomOf="@+id/addPlant_sunlightSumEditText" />
+                    app:layout_constraintTop_toBottomOf="@+id/addPlant_sunshineSumEditText" />
 
                 <TextView
                     android:id="@+id/addPlant_TextView11"
