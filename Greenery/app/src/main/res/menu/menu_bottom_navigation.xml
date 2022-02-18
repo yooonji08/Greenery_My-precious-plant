@@ -17,11 +17,6 @@
         android:icon="@drawable/ic_dictionary"
         android:title="식물 사전" />
     <item
-        android:id="@+id/menu_community"
-        android:enabled="true"
-        android:icon="@drawable/ic_community"
-        android:title="커뮤니티" />
-    <item
         android:id="@+id/menu_profile"
         android:enabled="true"
         android:icon="@drawable/ic_profile"
